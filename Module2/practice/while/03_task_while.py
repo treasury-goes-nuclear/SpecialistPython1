@@ -9,4 +9,13 @@
 # 123
 # 1234
 
-# TODO: your code here
+a = 1 # начальная ступенька
+b = 1 # текущее число в ступеньке
+n = int (input("Введите количество ступенек n "))
+while a <= n:
+	while b <= a:
+		print(b, end="")
+		b += 1
+	print()
+	b = 1
+	a += 1
