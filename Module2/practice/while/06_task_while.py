@@ -17,3 +17,32 @@
 # 284 220
 
 # TODO: your code here
+# безобразно долгий перебор даже до второй пары (1184, 1210)
+a = int(input("Введи натуральное число от 2 до 10000: "))
+b = 1
+sb = 0
+i1 = 1
+c = 1
+sc = 0
+i2 = 1
+
+while b <= a:
+    while i1 < b:
+        if b % i1 == 0:
+            sb = sb + i1
+        i1 += 1
+
+    while c <= a:
+        while i2 < c:
+            if c % i2 == 0:
+                sc = sc + i2
+            i2 += 1
+        if (b == sc and c == sb) and b != c:
+            print(b, c)
+        c += 1
+        sc = 0
+        i2 =1
+    b += 1
+    sb = 0
+    i1 = 1
+    c = 1
